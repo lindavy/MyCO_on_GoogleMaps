@@ -7,12 +7,12 @@ After completing CMPE 280 class, you have earned Web UI Architect contract-to-hi
 
 Your project manager wanted represent company locations on Google Maps (as part of contacts page). For User conveinance, he wanted to use custom flags for each location type and number the retail locations.
 
-Flag Legend:
+**Flag Legend:**
 
-Distribution facilities – Red Flag
-Headquarters – White Flag
-Call center – Blue Flag
-Retail locations – Green Flag
+* Distribution facilities – Red Flag
+* Headquarters – White Flag
+* Call center – Blue Flag
+* Retail locations – Green Flag
 
 **Part A:** Please develop Google Page driver for the above requirement. You can load provided JSON from local file or from Web Server. Please create a microservice based Web Service. 
 
