@@ -17,3 +17,6 @@ Your project manager wanted represent company locations on Google Maps (as part 
 **Part A:** Please develop Google Page driver for the above requirement. You can load provided JSON from local file or from Web Server. Please create a microservice based Web Service. 
 
 **Part B:** For 11 retail locations, please add revenue circle - that is, size the Circle location based on revenue of the retail location.
+
+## Resources
+[Google Maps Circles API](https://developers.google.com/maps/documentation/javascript/examples/circle-simple)
