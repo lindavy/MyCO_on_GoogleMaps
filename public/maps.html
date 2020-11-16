@@ -154,6 +154,10 @@
         }
       };
 
+      // Distribution facilities – Red Flag
+      // Headquarters – White Flag
+      // Call center – Blue Flag
+      // Retail locations – Green Flag
       function initMap() {
         // Create the map.
         const map = new google.maps.Map(document.getElementById("map"), {
@@ -164,19 +168,39 @@
 
         // Construct the circle for each value in citymap.
         // Note: We scale the area of the circle based on the population.
-        const citymapp = citymap["locations"]["location"]
+        var citymapp = citymap["locations"]["location"]
+        var flag_color = "#FFD9D1"; 
         
         for (const city in citymapp) {
-            // Add the circle for this city to the map.
+          const flag = citymapp[city]["type"]; 
+          console.log("flag: ", flag)
+          // Add the circle for this city to the map.
+            if (flag == 'HeadQuarters')
+            {
+              flag_color = "#FDF5F3" // white
+            }
+            else if (flag == 'RetailLocation')
+            {
+              flag_color = '#00DB33' // green
+            }
+            else if (flag == 'Call Center')
+            {
+              flag_color = '#0C5AF2' // blue
+            }
+            else if ("Distribution Facility")
+            {
+              flag_color = 'EB2E2B' // red
+            }
+
           const cityCircle = new google.maps.Circle({
-            strokeColor: "#FF0000",
+            strokeColor: flag_color,
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#FF0000",
+            fillColor: flag_color,
             fillOpacity: 0.35,
             map,
             center: { lat: citymapp[city]["latitude"], lng: citymapp[city]["longitude"]},
-            radius: Math.sqrt(citymapp[city]["$revenue"]) * 2,
+            radius: Math.sqrt(citymapp[city]["$revenue"] * 2),
           });
         }
       }
