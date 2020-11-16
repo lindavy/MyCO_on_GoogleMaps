@@ -12,7 +12,8 @@ Distribution facilities – Red Flag
 Headquarters – White Flag
 Call center – Blue Flag
 Retail locations – Green Flag
- Please develop Google Page driver for the above requirement. You can load provided JSON from local file or from Web Server. Please create a microservice based Web Service. 
+
+Please develop Google Page driver for the above requirement. You can load provided JSON from local file or from Web Server. Please create a microservice based Web Service. 
 
 Part B:
 
@@ -23,6 +24,11 @@ Application should listen on localhost:3000
 ```
 npm start
 ```
+
+Screenshot of Map
+
+
+![Map](map_screenshot.png)
 
 ## Resources
 [Microservices](https://nodesource.com/blog/microservices-in-nodejs)
